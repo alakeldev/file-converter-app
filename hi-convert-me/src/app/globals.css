@@ -19,3 +19,58 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.mycontainer {
+  max-width: 100%;
+  background-color: #2d2d2d;
+  color: #f0f0f0;
+  padding: 1rem;
+}
+
+.input-container .mainInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #3b3b3b;
+  color: #f0f0f0;
+}
+
+.preview-image {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #3b3b3b;
+}
+
+.convert-button {
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.convert-button:hover {
+  background-color: #1c7ed6;
+}
+
+@media (min-width: 640px) {
+  .mycontainer {
+    max-width: 600px;
+  }
+
+  .convert-button {
+    width: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .mycontainer {
+    margin: 2rem;
+  }
+}

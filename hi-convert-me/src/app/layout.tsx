@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import PrelineScript from "./components/common/PrelineScript";
-import Navbar from "./components/common/NavBar";
-import { BackgroundBeamsWithCollision } from "./components/common/BackgroundBeamsWithCollision";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,13 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hi Convert Me",
-  description: `The ultimate online tool for unlimited multimedia conversion.
-                Transform images, audio and videos without restrictions.
-                Start converting your content for free
-                `,
+  title: "Convert 2 PDF",
+  description: `The ultimate online tool for converting images without limits.
+                Effortlessly transform images to PDF without restrictions.
+                Start converting your content for free today.`,
   creator: "Abdullah Alakel",
-  keywords: "unlimited image converter, unlimited audio converter, unlimited video converter"
+  keywords: "Unlimited images converter, PDF conversion, free image to PDF",
 };
 
 export default function RootLayout({
@@ -33,12 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <PrelineScript /> 
-        <Navbar />
-        <BackgroundBeamsWithCollision />
-        <div className="">
-          {children}
-        </div>
+            {children}
+
+
+            
       </body>
     </html>
   );
