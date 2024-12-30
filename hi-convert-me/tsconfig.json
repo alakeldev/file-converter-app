@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/policy/page.jsx", "src/app/components/common/PrelineScript.jsx", "src/app/components/common/NavBar.jsx", "src/app/components/common/FileUpload.jsx", "src/app/components/common/BackgroundBeamsWithCollision.jsx", "src/app/lib/utils.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/policy/page.jsx", "src/app/components/common/PrelineScript.jsx", "src/app/components/common/NavBar.jsx", "src/app/components/common/FileUpload.jsx", "src/app/components/common/BackgroundBeamsWithCollision.jsx", "src/app/lib/utils.js", "src/app/layout.jsx", "src/app/page.jsx"],
   "exclude": ["node_modules"]
 }
