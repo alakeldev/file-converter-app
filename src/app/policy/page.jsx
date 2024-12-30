@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
         <h1 className="text-3xl font-bold mb-6 text-center text-blue-400">Privacy Policy</h1>
         <div className="bg-gray-800 p-6 rounded-lg shadow-md max-w-4xl mx-auto">
           <p className="mb-4">
-            Welcome to Convert 2 PDF. Your privacy is of utmost importance to us. This Privacy Policy outlines the types of information we do not collect and how we handle your data during your use of our application.
+            Welcome to Convert Image 2 PDF. Your privacy is of utmost importance to us. This Privacy Policy outlines the types of information we do not collect and how we handle your data during your use of our application.
           </p>
           <h2 className="text-2xl font-semibold mt-4 mb-2 text-blue-400">Data Collection</h2>
           <p className="mb-4">

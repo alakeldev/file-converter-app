@@ -14,7 +14,7 @@ export default function Home() {
         <BackgroundBeamsWithCollision className="absolute inset-0 w-full h-full -z-10 object-cover" />
         <div className="text-center p-10">
           <h1 className="text-4xl font-bold sm:text-6xl text-neutral-200">
-            Hi <span className="text-[#275195]">Convert</span> 2 PDF
+            <span className="text-[#275195]">Convert</span> Image 2 Pdf
           </h1>
           <p className="mt-3 text-neutral-300">
             Transform Any Image to PDF Instantly with Your All-in-One Conversion Tool!
