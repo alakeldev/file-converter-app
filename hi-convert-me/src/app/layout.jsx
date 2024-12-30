@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,7 +11,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Convert 2 PDF",
   description: `The ultimate online tool for converting images without limits.
                 Effortlessly transform images to PDF without restrictions.
@@ -21,18 +20,11 @@ export const metadata: Metadata = {
   keywords: "Unlimited images converter, PDF conversion, free image to PDF",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-            {children}
-
-
-            
+        {children}
       </body>
     </html>
   );

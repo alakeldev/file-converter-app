@@ -11,7 +11,7 @@ export default function Home() {
       <PrelineScript />
       <Navbar />
       <main className="relative z-10 flex-grow">
-        <BackgroundBeamsWithCollision className="absolute inset-0 w-full h-full -z-10 object-cover"/>
+        <BackgroundBeamsWithCollision className="absolute inset-0 w-full h-full -z-10 object-cover" />
         <div className="text-center p-10">
           <h1 className="text-4xl font-bold sm:text-6xl text-neutral-200">
             Hi <span className="text-[#275195]">Convert</span> 2 PDF
