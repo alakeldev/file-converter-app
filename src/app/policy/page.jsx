@@ -1,7 +1,7 @@
 import React from 'react';
-import PrelineScript from "../components/common/PrelineScript";
+import PrelineScript from "@/app/components/common/PrelineScript";
 import Navbar from "@/app/components/common/NavBar";
-import { BackgroundBeamsWithCollision } from "../components/common/BackgroundBeamsWithCollision";
+import { BackgroundBeamsWithCollision } from "@/app/components/common/BackgroundBeamsWithCollision";
 
 export default function PrivacyPolicy() {
   return (

@@ -1,9 +1,9 @@
-import PrelineScript from "./components/common/PrelineScript";
+import PrelineScript from "@/app/components/common/PrelineScript";
 import Navbar from "@/app/components/common/NavBar";
-import { BackgroundBeamsWithCollision } from "./components/common/BackgroundBeamsWithCollision";
+import { BackgroundBeamsWithCollision } from "@/app/components/common/BackgroundBeamsWithCollision";
 import React from 'react';
 import Script from 'next/script';
-import FileUpload from "./components/common/FileUpload";
+import FileUpload from "@/app/components/common/FileUpload";
 
 export default function Home() {
   return (
