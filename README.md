@@ -43,8 +43,9 @@ No Data Collection: We respect your privacy and do not collect or store any pers
 
 Clone the repository:
 
-git clone <https://github.com/your-username/convert-2-pdf.git>
-cd convert-2-pdf
+git clone <https://github.com/alakeldev/file-converter-app.git>
+
+cd file-converter-app
 
 Install dependencies:
 
