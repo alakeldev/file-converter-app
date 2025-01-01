@@ -22,7 +22,7 @@ export default function Home() {
         </div>
         <FileUpload />
       </main>
-      <Script src="/node_modules/lodash/lodash.min.js" strategy="afterInteractive" /> 
+      <Script src="/node_modules/lodash/lodash.min.js" strategy="afterInteractive" />
       <Script src="/node_modules/dropzone/dist/min/dropzone.min.js" strategy="afterInteractive" />
     </div>
   );
