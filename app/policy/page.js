@@ -1,4 +1,3 @@
-import React from 'react';
 import PrelineScript from "@/app/components/common/PrelineScript";
 import Navbar from "@/app/components/common/NavBar";
 import { BackgroundBeamsWithCollision } from "@/app/components/common/BackgroundBeamsWithCollision";

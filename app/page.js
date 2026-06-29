@@ -1,8 +1,6 @@
 import PrelineScript from "@/app/components/common/PrelineScript";
 import Navbar from "@/app/components/common/NavBar";
 import { BackgroundBeamsWithCollision } from "@/app/components/common/BackgroundBeamsWithCollision";
-import React from 'react';
-import Script from 'next/script';
 import FileUpload from "@/app/components/common/FileUpload";
 
 export default function Home() {
@@ -22,8 +20,6 @@ export default function Home() {
         </div>
         <FileUpload />
       </main>
-      <Script src="/node_modules/lodash/lodash.min.js" strategy="afterInteractive" />
-      <Script src="/node_modules/dropzone/dist/min/dropzone.min.js" strategy="afterInteractive" />
     </div>
   );
 }
