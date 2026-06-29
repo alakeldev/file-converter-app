@@ -11,6 +11,7 @@ const FileUpload = () => {
     const [fileName, setFileName] = useState("");
     const [imageSelected, setImageSelected] = useState(false);
     const [error, setError] = useState(null);
+    const [isConverting, setIsConverting] = useState(false);
 
     const handleImageChange = useCallback((e) => {
         const file = e.target.files?.[0];
@@ -29,7 +30,10 @@ const FileUpload = () => {
     }, []);
 
     const converToPdf = useCallback(() => {
-        if (!image) return;
+        if (!image || isConverting) return;
+
+        setIsConverting(true);
+        setError(null);
 
         const img = new Image();
         img.src = image;
@@ -66,12 +70,15 @@ const FileUpload = () => {
             } catch (err) {
                 setError("Failed to convert image to PDF. Please try a different image.");
                 console.error("PDF conversion error:", err);
+            } finally {
+                setIsConverting(false);
             }
         };
         img.onerror = () => {
             setError("Failed to load the selected image. Please try again.");
+            setIsConverting(false);
         };
-    }, [image, fileName]);
+    }, [image, fileName, isConverting]);
 
   return (
     <>
@@ -83,7 +90,14 @@ const FileUpload = () => {
         <div className="input-container flex flex-col items-center gap-4">
           <div className="custom-file-input-container">
             <label htmlFor="file-input" className="custom-file-input text-white"></label>
-            <input id="file-input" type="file" accept="image/*" className="mainInput border p-2 rounded bg-gray-700 text-white w-full" onChange={handleImageChange}/>
+            <input
+              id="file-input"
+              type="file"
+              accept="image/*"
+              className="mainInput border p-2 rounded bg-gray-700 text-white w-full"
+              onChange={handleImageChange}
+              disabled={isConverting}
+            />
           </div>
           {imageSelected && (
             <>
@@ -91,9 +105,34 @@ const FileUpload = () => {
                 <img className="preview-image max-w-full h-auto border p-2 rounded bg-gray-700 w-full" alt="Selected preview" src={image} />
             </div>
             <div className="file-name-input-container w-full">
-                <input placeholder="Enter File Name" id="file-name-input" type="text" className="border p-2 rounded bg-gray-700 text-white w-full" value={fileName} onChange={handleFileNameChange}/>
+                <input
+                  placeholder="Enter File Name"
+                  id="file-name-input"
+                  type="text"
+                  className="border p-2 rounded bg-gray-700 text-white w-full disabled:opacity-50"
+                  value={fileName}
+                  onChange={handleFileNameChange}
+                  disabled={isConverting}
+                />
             </div>
-            <button className="convert-button bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 mt-4 w-full sm:w-auto" onClick={converToPdf}>Download PDF File</button>
+            <button
+              className="convert-button bg-blue-500 text-white py-2 px-4 rounded mt-4 w-full sm:w-auto flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed hover:bg-blue-600 disabled:hover:bg-blue-500 transition-colors"
+              onClick={converToPdf}
+              disabled={isConverting}
+              aria-busy={isConverting}
+            >
+              {isConverting ? (
+                <>
+                  <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                  </svg>
+                  Converting…
+                </>
+              ) : (
+                'Download PDF File'
+              )}
+            </button>
             </>
           )}
         </div>
