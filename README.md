@@ -116,23 +116,24 @@ file-converter-app/
 ├── app/
 │   ├── components/
 │   │   └── common/
-│   │       ├── BackgroundBeamsWithCollision.js  # Animated background (Framer Motion)
-│   │       ├── FileUpload.js                    # Core converter UI and logic
-│   │       ├── NavBar.js                        # Top navigation bar
-│   │       └── PrelineScript.js                 # Preline UI initialiser
+│   │       ├── BackgroundBeamsWithCollision.tsx  # Animated background (Framer Motion)
+│   │       ├── FileUpload.tsx                    # Core converter UI and logic
+│   │       ├── NavBar.tsx                        # Top navigation bar
+│   │       └── PrelineScript.tsx                 # Preline UI initialiser
 │   ├── lib/
-│   │   └── utils.js                             # cn() utility (clsx + tailwind-merge)
+│   │   └── utils.ts                              # cn() utility (clsx + tailwind-merge)
 │   ├── policy/
-│   │   └── page.js                              # Privacy Policy page
-│   ├── globals.css                              # Global styles + Tailwind directives
-│   ├── layout.js                                # Root layout (fonts, metadata)
-│   └── page.js                                  # Home page
-├── public/                                      # Static assets (SVGs)
-├── eslint.config.mjs                            # ESLint configuration
-├── jsconfig.json                                # Path aliases (@/*)
-├── next.config.mjs                              # Next.js configuration
-├── postcss.config.mjs                           # PostCSS (required by Tailwind)
-├── tailwind.config.mjs                          # Tailwind CSS configuration
+│   │   └── page.tsx                              # Privacy Policy page
+│   ├── globals.css                               # Global styles + Tailwind directives
+│   ├── layout.tsx                                # Root layout (fonts, metadata)
+│   └── page.tsx                                  # Home page
+├── public/                                       # Static assets (SVGs)
+├── declarations.d.ts                             # Global ambient types (CSS modules, Window)
+├── eslint.config.mjs                             # ESLint configuration
+├── next.config.mjs                               # Next.js configuration
+├── postcss.config.mjs                            # PostCSS (required by Tailwind)
+├── tailwind.config.mjs                           # Tailwind CSS configuration
+├── tsconfig.json                                 # TypeScript configuration (strict mode)
 └── package.json
 ```
 
